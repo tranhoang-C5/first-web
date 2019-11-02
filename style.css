@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-container{ /*topnav style*/
+    width: 100%;
+    height: 5rem;
+    background: #041230;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-container a{     /*logo style*/
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    text-decoration: none;
+    padding:2rem;
+    font-weight: 600;
+}
+
+.humberger{/*humberger style*/
+    width: 2em;
+    height: 1.2em;
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.humberger div{
+   
+    background: white;
+    height: 0.1rem;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+}
+.bar1{
+    top:0 ;
+}
+.bar2{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bar3{
+    bottom: 0;
+}
+
+.humberger-clicked .bar1{
+    transform: translateY(1.2rem);
+    opacity: 0;
+}
+.humberger-clicked .bar2{
+    transform: rotate(45deg);
+}
+
+.humberger-clicked .bar3{
+    transform: translateY(-0.5rem) rotate(-45deg);
+    transition-duration: 0.2;
+    transition-delay: 0.1s;
+}
+
+/*end humberger*/
+.dropdown{
+    width: 100%;
+    position: absolute;
+    top:100%;
+    display: flex;
+    padding:2rem;
+    flex-direction: column;
+    background: #041230e5;
+    transform: translateY(-50%) scaleY(0);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.dropdown li{
+    margin: 0.8rem 0; 
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.dropdown-clicked{
+    transform: translateY(0) scaleY(1.2) !important;
+}
