@@ -36,7 +36,6 @@ function changeBackground(background){
             background[i+1].style.transform = "scale(1)";
             i++;
         }
-        console.log('done');
     },7000)
 }
 changeBackground(topBackground)
