@@ -40,7 +40,43 @@ function changeBackground(background){
 }
 changeBackground(topBackground)
 
-////////////////
+////////////////SKILL RANGE//////////////////
 
+const abilities = [85,85,70,60];
+const indexOfAbility = Array.from(document.querySelectorAll(".index-of-ability"))
+const abilityRange = Array.from(document.querySelectorAll(".ability-range-counter"))
+const skillContainer = document.querySelector(".skill-section");
 
-abc abc
+// build a function to count and show result of each ability
+function countAbilities(value,abilityIndex){
+    var i = 0;
+};
+for (let i = 0; i < abilities.length; i++){
+    abilityRange[i].style.width = '0';
+}
+function showSkill() {
+    for (let i = 0; i < abilities.length; i++){
+        abilityRange[i].style.width = `${abilities[i]}%`;//set range of ability
+        let j = 0;
+        var show = setInterval(() => {
+            if (j == abilities[i]+1){
+                clearInterval(show);
+            }
+            else{
+                indexOfAbility[i].textContent = j +'%';
+                j++;
+            }
+        }, 1700/abilities[i]);
+    } 
+}
+
+//run function when scroll top the element
+console.log(skillContainer.offsetTop);
+window.addEventListener('scroll',function runSkillBar(){
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > skillContainer.offsetTop - window.outerHeight + 300 ){
+        console.log(skillContainer.offsetHeight);
+        showSkill();
+        this.removeEventListener('scroll',runSkillBar);
+    }
+});

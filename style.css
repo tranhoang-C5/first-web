@@ -296,12 +296,12 @@
     box-shadow: 0 0 8px rgb(104, 103, 103);
 }
 
-@media only screen and (min-width:640px){
+@media only screen and (min-width:641px){
     .header-img-wraper img{
         width: 100%;
     }
 }
-@media only screen and (min-width:768px){
+@media only screen and (min-width:769px){
     .avatar2{
         display: none;
     }
@@ -329,15 +329,84 @@
         width: 50%;
     }
 }
-
-/* .nav-container{
-    display: none;
-}
-#container{
-    margin-left: 0;
-}
-
- */
-
-
 /*END ABOUT ME*/
+
+
+/*SKILL SECTION*/
+
+.skill-section{
+    background: #F6F7FD;
+    padding: 5rem 1rem;
+}
+.skill-container{
+    display: flex;
+    flex-direction: column;
+}
+.skill-content h2{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+.skill-content span{
+    display: block;
+    padding: 1.5rem 0;
+    word-spacing: 1px;
+}
+
+.abilities{
+    padding-bottom: 1rem;
+}
+
+.ability {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.ability label{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.ability-range{
+    width: 100%;
+    background: #DDDEE3;
+    height: 5px;
+    border-radius:3px ;
+}
+
+.ability-range-counter{
+    background: black;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px ;
+    transition: width 2s;
+}
+
+.index-of-ability{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:1025px){
+    .skill-content{
+        width: 35%;
+        margin-right: 5%;
+    }
+    .skill-range-container{
+        width:auto;
+        flex-grow: 1;
+    }
+    .skill-section{
+        padding: 5rem 5%;
+    }
+    .skill-container{
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+
+
+/*END SKILL SECTION*/
