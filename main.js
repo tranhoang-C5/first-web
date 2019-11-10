@@ -54,7 +54,7 @@ function countAbilities(value,abilityIndex){
 for (let i = 0; i < abilities.length; i++){
     abilityRange[i].style.width = '0';
 }
-function showSkill() {
+var showSkill = function() {
     for (let i = 0; i < abilities.length; i++){
         abilityRange[i].style.width = `${abilities[i]}%`;//set range of ability
         let j = 0;
@@ -66,17 +66,34 @@ function showSkill() {
                 indexOfAbility[i].textContent = j +'%';
                 j++;
             }
-        }, 1700/abilities[i]);
+        }, 1600/abilities[i]);
     } 
 }
-
+showSkill();
 //run function when scroll top the element
-console.log(skillContainer.offsetTop);
 window.addEventListener('scroll',function runSkillBar(){
     console.log(window.pageYOffset);
     if (window.pageYOffset > skillContainer.offsetTop - window.outerHeight + 300 ){
-        console.log(skillContainer.offsetHeight);
         showSkill();
         this.removeEventListener('scroll',runSkillBar);
     }
 });
+
+
+
+
+////////////detail work///////////////
+const works = Array.from(document.querySelectorAll(".work-box"));
+var activeBox = function(){
+    works.forEach(elem => elem.classList.remove('work-box-active'));//restart box to default
+    this.classList.add('work-box-active');
+};
+
+for(let i = 0; i< works.length;i++){
+    works[i].addEventListener('click',activeBox)
+};
+
+
+// works.forEach(element => {
+//     element.addEventListener('click',activeBox(this));
+// });

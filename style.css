@@ -234,18 +234,18 @@
     padding: 6rem 1rem;
 }
 
-.about-me-title{
+.section-title{
     margin-left: 5%;
     padding: 0.6rem;
     border-left: 5px solid #E3872D ;
 }
-.about-me-title h1{
+.section-title h1{
     font-weight: 900;
     letter-spacing: 3px;
     word-spacing: 1px;
     font-size: 2.5rem;
 }
-.about-me-title span{
+.section-title span{
     font-size: 1.2rem;
 }
 
@@ -334,9 +334,13 @@
 
 /*SKILL SECTION*/
 
+.section-container{
+    padding: 5rem 1rem;
+}
+
 .skill-section{
     background: #F6F7FD;
-    padding: 5rem 1rem;
+
 }
 .skill-container{
     display: flex;
@@ -351,6 +355,7 @@
     display: block;
     padding: 1.5rem 0;
     word-spacing: 1px;
+    line-height: 1.5rem;
 }
 
 .abilities{
@@ -402,11 +407,60 @@
         flex-direction: row;
     }
 }
-
-
-
-
-
-
-
 /*END SKILL SECTION*/
+
+
+/*WORK SECTION*/
+.work-detail{
+    padding: 5rem 0 0 0;
+    display: grid;
+    grid-template-columns: 1;
+}
+
+.work-box{
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(214, 214, 214, 0.562);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.work-box span i{
+    font-size: 2.5rem;
+    color: #ec9b3b;
+    padding-bottom: 1.3rem;
+}
+.work-box h3{
+    letter-spacing: 1px;
+    padding-bottom: 1.3rem;
+    font-size: 1.3rem;
+}
+
+.work-box p{
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.work-box-active{
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+@media only screen and (min-width:1025px){
+    .work-detail{
+        padding: 5rem 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2rem;
+    }
+}
+
+@media only screen and (min-width:1281px){
+    .work-detail{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 2rem;
+    }
+}
+
+
+/*END WORK SECTION*/
